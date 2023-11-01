@@ -1,5 +1,8 @@
 from django.shortcuts import render , redirect
 from .models import ConceptoGasto
+from rest_framework.decorators import api_view, action
+from rest_framework import generics, viewsets, status
+from .serializers import ConceptoGastoSerializer
 
 def concepto_gastos(request):
     conceptos= ConceptoGasto.objects.all()
@@ -28,3 +31,7 @@ def modificar_concepto(request, concepto_id):
         concepto.save()
 
     return redirect('/app/')
+
+class ConceptoGastosViewSet(viewsets.ModelViewSet):
+    queryset = ConceptoGasto.objects.all()
+    serializer_class = ConceptoGastoSerializer

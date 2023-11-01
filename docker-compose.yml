@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  web:
+    image: flujo-caja-bm
+    ports:
+      - "8787:8787"
