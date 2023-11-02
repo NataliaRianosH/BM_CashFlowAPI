@@ -25,7 +25,13 @@ SECRET_KEY = 'django-insecure-3ojfz*^bjmm9g4g#s2vdduiba#ljvrue!za^ftlagh_@3)je6y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "0.0.0.0",
+    "127.0.0.1",
+    "bemanager-cash-flow:8787",
+    "bemanager-cash-flow"
+]
 
 
 # Application definition
