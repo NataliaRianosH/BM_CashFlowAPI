@@ -2,6 +2,10 @@ version: '3'
 
 services:
   web:
-    image: flujo-caja-bm
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
     ports:
       - "8787:8787"
